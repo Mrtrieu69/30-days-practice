@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+}
+
+.container{
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 400px;
+}
+
+.register{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-group input{
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #cccccc;
+}
+
+.form-group.error input{
+    border-bottom: 3px solid red;
+}
+
+.form-group .border{
+    position: absolute;
+    top: 21px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #3ca7ee;
+    transition: all ease 0.5s;
+}
+
+.form-group input:focus + .border{
+    width: 100%;
+}
+
+.form-group .form-message{
+    margin-top: 4px;
+    display: inline-block;
+    color: red;
+}
+
+.submit{
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 30px;
+    background: #2691d9;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all ease 0.5s;
+}
+
+.submit:hover{
+    opacity: 1;
+}
+
+.form p{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form p a{
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.form p a:hover{
+    text-decoration: underline;
+}

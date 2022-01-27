@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #b1b9d4;
+}
+
+
+.card{
+    padding: 20px;
+    width: 700px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    border-radius: 10px;
+    background: white;
+}
+
+.image{
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content{
+    flex: 1;
+    margin-left: 20px;
+}
+
+.content .desc{
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.content .title{
+    height: 40px;
+    border-radius: 10px;
+}
+
+.content .more{
+    padding: 12px 12px;
+    border-radius: 10px;
+    color: white;
+    background: #333;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    min-width: 100px;
+    height: 40px;
+}
+
+.card.loading .image,
+.card.loading .title,
+.card.loading .desc,
+.card.loading .more{
+    position: relative;
+    background: #b8b8b8;
+    overflow: hidden;
+}
+
+.card.loading .image::after,
+.card.loading .title::after,
+.card.loading .desc::after,
+.card.loading .more::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    animation: loading ease 1s infinite;
+}
+
+@keyframes loading {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}

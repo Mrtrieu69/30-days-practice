@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="register">Register</h1>
+        <form action="" class="form">
+            <div class="form-group">
+                <input id="name" type="text" name="name" placeholder="User name">
+                <span class="border"></span>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <input id="email" type="email" name="email" placeholder="Email">
+                <span class="border"></span>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <input id="password" type="password" name="password" placeholder="Password">
+                <span class="border"></span>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <input id="confirm-password" type="password" name="confirm-password" placeholder="Confirm Password">
+                <span class="border"></span>
+                <span class="form-message"></span>
+            </div>
+            <button class="submit">Register</button>
+            <p>Do you already have an account? <a href="#">Login</a> </p>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        Validator({
+            form: ".form",
+            errorSelector: ".form-message",
+            rules: [
+                Validator.isRequired("#name"),
+                Validator.isRequired("#email"),
+                Validator.isEmail("#email"),
+                Validator.isRequired("#password"),
+                Validator.isMinLength ("#password", 6),
+                Validator.isRequired("#confirm-password"),
+                Validator.isConfirmed("#confirm-password", function(){
+                    return document.querySelector(".form #password").value
+                })
+            ],
+            onSubmit: function(data){
+                console.log(data);
+            }
+        })
+    </script>
+</body>
+</html>

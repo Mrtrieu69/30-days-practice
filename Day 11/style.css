@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    text-align: center;
+    min-width: 100px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.btn.success{
+    background: rgb(0, 128, 0);
+}
+
+.btn.warning{
+    background: rgb(255, 165, 0);
+}
+
+.btn.error{
+    background: rgb(255, 0, 0);
+}
+
+.toasts{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+.toast{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    animation: fadeIn ease-in-out 1s, fadeOut ease-in-out 1s 5s;
+    transition: all ease 0.3s;
+}
+
+
+.toast i {
+    margin: 0 20px 0 0 ;
+}
+
+.toast span{
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    animation: countdown linear 4s 1s, opacity 1s 5s;
+}
+
+.toast span.success{
+    background: rgb(0, 128, 0)
+}
+
+.toast span.warning{
+    background: rgb(255, 165, 0)
+}
+
+.toast span.error{
+    background: rgb(255, 0, 0)
+}
+
+.toast.success{
+    background-color: rgba(0, 128, 0, 0.4);
+    border-left: 5px solid rgb(0, 128, 0);
+}
+
+.toast.error{
+    background-color: rgba(255, 0, 0, 0.4);
+    border-left: 5px solid rgb(255, 0, 0);
+}
+
+.toast.warning{
+    background-color: rgba(255, 165, 0, 0.4);
+    border-left: 5px solid rgb(255, 165, 0);
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateX(120%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeOut {
+    100%{
+        transform: translateX(120%);
+    }
+    60%{
+        transform: translateX(-10%);
+    }
+    30%{
+        transform: translateX(5%);
+    }
+    0%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes countdown {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}

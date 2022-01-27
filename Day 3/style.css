@@ -1,0 +1,116 @@
+:root{
+    --primary-color: #e26e70;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% )
+}
+
+.open{
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.open:hover{
+    opacity: 0.8;
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.content{
+    border-radius: 5px;
+    position: relative;
+    width: 450px;
+    overflow: hidden;
+    animation: fade ease 0.6s;
+}
+
+.content-header{
+    color: white;
+    background: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.content-header .welcom{
+    flex: 1;
+}
+
+.content-header span{
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content-body{
+    background: white;
+    padding: 20px;
+}
+
+.content-body p{
+    padding: 10px 0;
+}
+
+.content-body .btn-close{
+    float: right;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.clear{
+    clear:both;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal.hide{
+    display: none;
+}

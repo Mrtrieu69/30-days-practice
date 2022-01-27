@@ -1,0 +1,126 @@
+:root{
+    --fb-color: #3b5999;
+    --tw-color: #46c1f6;
+    --yt-color: #de463b;
+    --git-color: #333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #dadada;
+}
+
+.container{
+    display: flex;
+}
+
+.contact{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.contact i{
+    font-size: 30px;
+}
+
+.contact:hover{
+    color: white;
+}
+
+.contact:hover .desc{
+    top: -80%;
+    opacity: 1;
+}
+
+.desc{
+    position: absolute;
+    font-size: 24px;
+    padding: 12px 16px;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    color: white;
+    pointer-events: none;
+    opacity: 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+}
+
+.desc::after{
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 15px 15px;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact.facebook:hover{
+    background: var(--fb-color);
+}
+
+.contact.facebook:hover .desc{
+    background: var(--fb-color);
+}
+
+.contact.facebook .desc::after{
+    border-color: var(--fb-color) transparent transparent transparent;
+}
+
+.contact.twitter:hover{
+    background: var(--tw-color);
+}
+
+.contact.twitter:hover .desc{
+    background: var(--tw-color);
+}
+
+.contact.twitter .desc::after{
+    border-color: var(--tw-color) transparent transparent transparent;
+}
+
+.contact.github:hover{
+    background: var(--git-color);
+}
+
+.contact.github:hover .desc{
+    background: var(--git-color);
+}
+
+.contact.github .desc::after{
+    border-color: var(--git-color) transparent transparent transparent;
+}
+
+.contact.youtube:hover{
+    background: var(--yt-color);
+}
+
+.contact.youtube:hover .desc{
+    background: var(--yt-color);
+}
+
+.contact.youtube .desc::after{
+    border-color: var(--yt-color) transparent transparent transparent;
+}

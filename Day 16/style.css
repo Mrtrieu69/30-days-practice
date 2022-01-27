@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app{
+    overflow: hidden;
+}
+
+.first{
+    padding: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.first .block{
+    width: 50%;
+}
+
+.block .title{
+    margin-bottom: 20px;
+    font-size: 60px;
+    transform: translateX(-150%);
+    transition: all ease-in-out 0.5s;
+}
+
+.block .title.start{
+    transform: translateX(0);
+}
+
+.block .desc{
+    transform: translateX(-150%);
+    transition: all ease-in-out 0.5s;
+}
+
+.block .desc.start{
+    transform: translateX(0);
+}
+.second{
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test{
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    width: 35%;
+    margin: 20px;
+}
+
+.test.left{
+    transform: translateX(-150%);
+    transition: all ease-in-out 0.5s;
+}
+
+.test.right{
+    transform: translateX(150%);
+    transition: all ease-in-out 0.5s;
+}
+
+.test.start{
+    transform: translateX(0);
+}
+
+.third{
+    height: 100vh;
+    background: linear-gradient(180deg, green 50%, white 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    width: 15%;
+    margin: 20px;
+    transform: scale(0);
+    transition: all ease-in-out 0.5s;
+}
+
+.card.start{
+    transform: scale(1);
+}
+
+.card .title{
+    margin-bottom: 20px;
+    color: green;
+}
+
+
+@keyframes appearFromLeft {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
+
+@keyframes appearFromRight {
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

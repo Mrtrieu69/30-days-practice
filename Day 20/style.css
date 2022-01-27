@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #060802;
+}
+
+.title{
+    margin: 0 auto;
+    color: #96ee1c;
+    font-size: 70px;
+    font-weight: 700;
+    text-shadow: 0 0 100px #96ee1c;
+}
+
+.title p{
+    overflow: hidden;
+    animation: type ease 1s infinite, typing 10s steps(30) infinite;
+    white-space: nowrap;
+
+}
+
+@keyframes type{
+    0%, 100%{
+        border-right: 10px solid #96ee1c;
+    }
+    50%{
+        border-right: 10px solid transparent;
+    }
+}
+
+@keyframes typing {
+    0%, 100%{
+        width: 0;
+    }
+
+    70%, 90%{
+        width: 100%;
+    }
+}

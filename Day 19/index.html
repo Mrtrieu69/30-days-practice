@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="utils">
+                <div class="box">
+                    <input type="color">
+                </div>
+                <div class="box eraser">
+                    <i class="fas fa-eraser"></i>
+                </div>
+                <div class="box minus">
+                    <i class="fas fa-minus"></i>
+                </div>
+                <div class="box value">
+                    10
+                </div>
+                <div class="box plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="another">   
+                <a download="example.png" class="box download">
+                    <i class="fas fa-cloud-download-alt"></i>
+                </a>
+                <div class="box clear">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <canvas id="myCanvas" width="1200" height="600" style="border:1px solid #000000;"></canvas>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

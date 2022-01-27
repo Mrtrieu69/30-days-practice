@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: steelblue;
+}
+
+.another,
+.utils{
+    display: flex;
+}
+
+.box{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 10px;
+    background: white;
+}
+
+.box input{
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+}
+
+.board{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box.download{
+    color: blue;
+    text-decoration: none;
+}

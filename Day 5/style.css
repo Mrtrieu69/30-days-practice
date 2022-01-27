@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% )
+}
+
+.container{
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.container input{
+    width: 320px;
+    padding: 16px 30px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+    background-color: #242628;
+    font-size: 28px;
+    color: white;
+    transition: all ease 0.5s;
+}
+
+.container input.hide{
+    width: 0;
+    padding: 0;
+}
+
+.container .search{
+    width: 64px;
+    height: 64px;
+    background: white;
+    color: #242628;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <input class="search" type="text" placeholder="Search...">
+        <div class="content">
+            <h1 class="name">
+                <span class="city"></span>,
+                <span class="country"></span>
+            </h1>
+            <div class="temperature">
+                <span class="value"></span>
+                <span>
+                    <sup>o</sup>
+                    C
+                </span>
+            </div>
+            <h2 class="short-desc"></h2>
+            <div class="more-desc">
+                <div class="detail visibility">
+                    <i class="far fa-eye"></i>
+                    <span class="value"></span>
+                </div>
+                <div class="detail wind">
+                    <i class="fas fa-wind"></i>
+                    <span class="value"></span>
+                </div>
+                <div class="detail cloud">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span class="value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

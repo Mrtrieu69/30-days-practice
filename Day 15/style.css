@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #dadada
+}
+
+.container{
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: white;
+    overflow: hidden;
+}
+.header{
+    padding: 20px;
+}
+
+.title{
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.search{
+    padding: 8px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search i {
+    margin: 0 8px;
+}
+
+.search input{
+    flex: 1;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.list{
+    list-style: none;
+    max-height: 350px;
+    margin: 10px 0;
+    overflow-y: auto;
+}
+
+.item{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item:hover{
+    background: #dadada;
+}
+
+.item.hide{
+    display: none;
+}
+.item .image{
+    width: 50px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.item .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.item .details{
+    height: 70px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item .details .name{
+    height: 36px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

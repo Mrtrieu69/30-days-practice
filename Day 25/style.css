@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #333;
+}
+
+.container{
+    position: relative;
+    width: 720px;
+    height: 406px;
+    overflow: hidden;
+}
+
+.video{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.control{
+    transform: translateY(100%);
+    transition: all ease 0.3s;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 12px 0;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.9), transparent);
+}
+
+.container:hover .control{
+    transform: translateY(0);
+}
+
+.control .toggle{
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+.control .toggle:hover{
+    color: blue;
+}
+
+.toggle i.fa-pause{
+    display: none;
+}
+
+.toggle.play i.fa-play{
+    display: none;
+}
+.toggle.play i.fa-pause{
+    display: block;
+}
+
+.control .time{
+    margin: 0 8px;
+}
+
+.control .next,
+.control .prev{
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.control .next:hover,
+.control .prev:hover{
+    color: blue;
+}
+
+.control #volume{
+    margin: 0 12px;
+    width: 100px;
+}
+
+.control #progress{
+    flex: 1;
+}
